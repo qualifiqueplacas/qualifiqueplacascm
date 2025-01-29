@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site da Qualifique Placas - Soluções em fachadas comerciais e comunicação visual.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Qualifique Placas</title>
+    <style>
+    /* Geral */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Botão fixo do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-button img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito hover (aumenta o botão) */
+.whatsapp-button img:hover {
+    transform: scale(1.1);
+}
+
+/* Notificação (bolinha vermelha) */
+.whatsapp-notification {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Tooltip (balão de mensagem) */
+.whatsapp-tooltip {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: #25d366;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Exibir tooltip quando passa o mouse */
+.whatsapp-button:hover .whatsapp-tooltip {
+    opacity: 1;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+}
+
+/* Carousel */
+.carousel-inner img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Formulário de orçamento */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+input, textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.file-preview {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.file-preview img {
+    max-width: 100px;
+    border-radius: 4px;
+}
+
+button {
+    background: #007BFF;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Estilo para seção sobre o serviço */
+#home {
+    padding: 20px;
+}
+
+#home h2 {
+    font-size: 24px;
+}
+
+#home p {
+    font-size: 16px;
+}
+
+/* Estilo para o portfólio */
+#portfolio {
+    padding: 20px;
+}
+
+#portfolio h2 {
+    font-size: 24px;
+}
+
+/* Estilo para o contato */
+#contato {
+    padding: 20px;
+}
+
+#contato h2 {
+    font-size: 24px;
+}
+
+#contato p {
+    font-size: 16px;
+}
+
+/* Estilo para o select, igual aos outros inputs */
+.elementor-field-type-select select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+
+    </style>
+    
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="../Qualifique Placas/img/logo.png" alt="logo" width="50px" height="50px">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#orcamento">Orçamento</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Sobre o Serviço</h2>
+        <p>Trabalhamos com:<br>Placas ACM<br>Placas PVC<br></p>
+    </section>
+
+    <section id="orcamento">
+            <div class="form-container">
+                <h2>Solicite um Orçamento</h2>
+                <form id="orcamento-form">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu E-mail" required>
+                    <input type="tel" id="telefone" placeholder="Seu Telefone" required>
+                    
+                    <div class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_83708e9 elementor-col-100 elementor-field-required">
+                        <div class="elementor-field elementor-select-wrapper">
+                            <select name="form_fields[field_83708e9]" id="form-field-field_83708e9" class="elementor-field-textual elementor-size-sm" required="required" aria-required="true">
+                                <option value="Serviço">Serviço</option>
+                                <option value="Fachadas comerciais">Fachadas comerciais</option>
+                                <option value="Fachadas em ACM">Fachadas em ACM</option>
+                                <option value="Letra Caixa">Letra Caixa</option>
+                                <option value="Outros">Outros</option>
+                            </select>
+                    <textarea id="descricao" placeholder="Descreva o serviço desejado" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+    </section>
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <div class="video-gallery"></div>
+    </section>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="../Qualifique Placas/img/placa1.jpg" class="d-block w-100" alt="Placa 1">
+            </div>
+            <div class="carousel-item">
+                <img src="../Qualifique Placas/img/placa2.webp" class="d-block w-100" alt="Placa 2">
+            </div>
+            <div class="carousel-item">
+                <img src="../Qualifique Placas/img/placa3.webp" class="d-block w-100" alt="Placa 3">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p><strong>Telefone:</strong> (61) 9872-0758</p>
+        <p>Estamos localizados em Unaí. Entre em contato pelo telefone ou WhatsApp.</p>
+    </section>
+
+    <!-- Botão do WhatsApp -->
+<a href="https://api.whatsapp.com/send?phone=+556198720758" class="whatsapp-button" target="_blank">
+    <div class="whatsapp-tooltip">Chamar no WhatsApp</div>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <span class="whatsapp-notification">1</span>
+</a>
+
+    <footer>
+        <p>&copy; 2025 Qualifique Placas. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
