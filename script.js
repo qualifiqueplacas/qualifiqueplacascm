@@ -14,5 +14,16 @@ document.querySelector('form').addEventListener('submit', function(event) {
         // Limpar formulário
         document.querySelector('form').reset();
     }
+
+    const words = ["Pintura", "Letreiros", "Luminosos", "Adesivos"];
+        let index = 0;
+        const textElement = document.getElementById("dynamic-text");
+
+        function changeText() {
+            index = (index + 1) % words.length;
+            textElement.textContent = words[index];
+        }
+
+        setInterval(changeText, 2000); // Troca a palavra a cada 2 segundos
     
 });
