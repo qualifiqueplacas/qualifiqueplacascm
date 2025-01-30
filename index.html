@@ -34,34 +34,7 @@ nav a {
     color: white;
     text-decoration: none;
 }
-         body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f4f4f4;
-        }
-        .container {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #1e293b;
-        }
-        .highlight {
-            color: #22c1dc;
-            position: relative;
-        }
-        .highlight::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 8px;
-            background: rgba(34, 193, 220, 0.2);
-            z-index: -1;
-        }
-
+         
 /* Botão fixo do WhatsApp */
 .whatsapp-button {
     position: fixed;
@@ -257,22 +230,6 @@ button:hover {
         <h2>Sobre o Serviço</h2>
         <p>Trabalhamos com:<br>Placas ACM<br>Placas PVC<br></p>
     </section>
-    <div class="container">
-        O que podemos fazer por você? <br>
-        <span class="highlight" id="dynamic-text">Pintura</span>
-    </div>
-
-    <script>
-        const words = ["Pintura", "Letreiros", "Luminosos", "Adesivos"];
-        let index = 0;
-        const textElement = document.getElementById("dynamic-text");
-
-        function changeText() {
-            index = (index + 1) % words.length;
-            textElement.textContent = words[index];
-        }
-
-        setInterval(changeText, 2000); // Troca a palavra a cada 2 segundos
 
     <section id="orcamento">
             <div class="form-container">
