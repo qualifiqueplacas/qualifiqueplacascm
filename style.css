@@ -1,0 +1,731 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #eeeeee;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://images.unsplash.com/photo-1454117096348-e4abbeba002c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYW5vJTIwZGUlMjBmdW5kbyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixa a imagem na tela ao rolar */
+}
+
+@keyframes brilho {
+  0% {
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(51, 51, 51, 1);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(51, 51, 51, 0.6);
+  }
+}
+
+.header-title {
+  display: flex; /* Fundo apenas no tamanho do texto */
+  background-color: rgba(
+    177,
+    177,
+    177,
+    0.7
+  ); /* Fundo escuro semi-transparente */
+  color: rgb(255, 255, 255); /* Cor do texto */
+  padding: -38px -30px; /* Aumentando o espaço interno para destacar mais */
+  font-size: 15px; /* Aumentando o tamanho do texto */
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 3px solid #000000; /* vermelho, 3px */
+}
+
+.fale-conosco {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  background: #707070;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+  animation: brilho 1s infinite;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+
+.fale-conosco:hover {
+  background: #585858;
+  box-shadow: 0 0 20px rgba(68, 68, 68, 0.8);
+  transform: scale(1.05);
+}
+
+#logo {
+  position: absolute; /* Faz a logo sair do fluxo normal e posicioná-la de forma fixa */
+  left: 30px; /* Distância do lado esquerdo */
+  top: 50%; /* Coloca a logo no centro vertical do cabeçalho */
+  transform: translateY(-50%); /* Ajusta a posição para realmente centralizar */
+  margin-top: -330px;
+}
+
+header h1 {
+  margin: 0; /* Remove a margem padrão do h1 */
+  font-size: 100px;
+}
+
+header nav {
+  display: flex;
+  flex-wrap: wrap; /* Permite que o menu quebre linha quando necessário */
+  justify-content: center; /* Centraliza o conteúdo */
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 20;
+  display: flex;
+  flex-wrap: wrap; /* Garante que os itens dentro da lista quebrem linha */
+  justify-content: center; /* Centraliza os itens dentro da lista */
+  gap: 150px;
+}
+
+header nav ul li {
+  margin: 0 15px;
+  margin-top: 10px;
+}
+
+header nav ul li a {
+  margin-top: 50px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1.6em;
+  font-family: sans-serif;
+  gap: 40%;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  transition: 0s;
+  color: rgb(0, 0, 0);
+}
+
+#home,
+#portfolio,
+#orcamento,
+#contato {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+#home {
+  margin-top: 100px; /* Espaço para separar o conteúdo do header */
+}
+
+footer {
+  background-color: #a2a2a2;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+button {
+  background-color: #f39c12;
+  border: none;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e67e22;
+}
+
+.video-gallery iframe {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
+}
+
+header {
+  background-color: #acacac;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+nav a {
+  color: rgb(90, 90, 90);
+  text-decoration: none;
+}
+
+/* Botão fixo do WhatsApp */
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ícone do WhatsApp */
+.whatsapp-button img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito hover (aumenta o botão) */
+.whatsapp-button img:hover {
+  transform: scale(1.1);
+}
+
+/* Notificação (bolinha vermelha) */
+.whatsapp-notification {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: red;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+/* Tooltip (balão de mensagem) */
+.whatsapp-tooltip {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background: #25d366;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Exibir tooltip quando passa o mouse */
+.whatsapp-button:hover .whatsapp-tooltip {
+  opacity: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+/* Ajusta o tamanho do carrossel */
+.carousel {
+  position: relative;
+  flex: 2;
+  max-width: 100%;
+  height: 400px;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.carousel-inner img {
+  height: 60vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Contêiner Principal */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 50px;
+}
+
+/* Estilizando o formulário */
+.form-container {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+  background: rgb(245, 243, 243);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+}
+
+.orcamento {
+  display: flex;
+  justify-content: end;
+  padding: 20px;
+}
+
+.letreiro {
+  margin-right: 50%;
+  color: #000000;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+h1 {
+  position: relative;
+  top: 50px; /* Sobe 20px */
+  left: 70px; /* Move para a direita */
+  font-weight: normal;
+  font-size: 50px;
+  color: #5f5f5f;
+}
+.highlight {
+  color: #ffffff;
+  background-color: #e0f7fa;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+#word-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: max-content;
+}
+
+#changing-word {
+  display: inline-block;
+  padding: 5px 10px;
+  position: relative;
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out, opacity 0.3s;
+}
+
+.exit {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.enter {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.project {
+  display: inline-block !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin-top: 100px;
+  margin-left: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 180px;
+}
+
+.project img {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-text {
+  flex-grow: 1;
+  width: 70%;
+  font-size: 24px;
+  color: #555;
+  line-height: 1.6;
+  font-family: sans-serif;
+}
+
+.project:hover {
+  transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
+}
+
+h5 {
+  font-size: 30px;
+  margin-left: 40px;
+}
+
+.info-box {
+  background: linear-gradient(135deg, #bababa, #777);
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 500px;
+  text-align: center;
+  margin: 20px auto;
+}
+
+.info-box img {
+  width: 100%; /* Ocupa todo o espaço disponível */
+  max-width: 100px; /* Limite máximo */
+  height: auto; /* Mantém a proporção */
+  display: block; /* Remove espaços extras ao redor */
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+.info-box p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.cta {
+  background-color: #00fff2;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.cta:hover {
+  background-color: #00ccff;
+}
+
+.carousel-overlay {
+  position: absolute;
+  top: 10%; /* Ajuste a posição para que fique no topo da imagem */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10; /* Garante que o texto fique sobre o carrossel */
+  color: white;
+  text-align: center;
+}
+
+.carousel-overlay h2 {
+  font-size: 36px;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
+}
+
+.orcamento-perso {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .servicos {
+    grid-template-columns: 1fr; /* força 1 coluna */
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: auto;
+  }
+
+  .orcamento {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-container {
+    margin-top: 35%;
+    justify-content: center;
+  }
+
+  .letreiro {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    left: 10%;
+  }
+
+  .carousel {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .carousel-inner {
+    height: 100%;
+  }
+
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .project-content {
+    flex-direction: column; /* Muda para uma coluna para telas menores */
+    align-items: flex-start; /* Alinha a imagem e o texto no início */
+    gap: 20px;
+  }
+
+  .project img {
+    width: 100%; /* A imagem ocupará toda a largura disponível */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+  }
+
+  .project-text {
+    max-width: 100%; /* O texto pode ocupar toda a largura disponível */
+  }
+
+  /* Ajustes no título do cabeçalho */
+  .header-title {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  /* Logo ajustada para telas menores */
+  #logo {
+    top: 50px; /* Posiciona a logo mais perto do topo */
+    left: 15px;
+    margin-top: 0; /* Remove o deslocamento para o topo */
+    width: 150px; /* Define um tamanho fixo para a logo */
+  }
+
+  header h1 {
+    font-size: 50px; /* Reduz o tamanho do título */
+  }
+
+  /* Navegação ajustada para telas menores */
+  header nav ul {
+    flex-direction: grid;
+    align-items: center;
+    margin: 0;
+    gap: 50px;
+  }
+
+  header nav ul li {
+    margin: 1px 0;
+  }
+
+  header nav ul li a {
+    font-size: 1.2em;
+  }
+
+  /* Ajustes para o botão Fale Conosco */
+  .fale-conosco {
+    display: none;
+    top: auto; /* Remove a posição fixa */
+    right: 10px; /* Ajusta a distância da borda */
+    bottom: 650px; /* Coloca o botão mais embaixo */
+    animation: brilho 1s infinite;
+  }
+}
+
+@media (max-width: 1070px) {
+  .servicos {
+    grid-template-columns: repeat(2, 1fr); /* força 2 colunas */
+  }
+
+  .orcamento {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .form-container {
+    margin-top: 35%;
+    justify-content: center;
+  }
+
+  .letreiro {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    left: 10%;
+  }
+
+  .fale-conosco {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  .letreiro {
+    position: relative;
+  }
+}
+
+/* Estilo para seção sobre o serviço */
+#home {
+  padding: 20px;
+}
+
+#home h2 {
+  font-size: 24px;
+}
+
+#home p {
+  font-size: 16px;
+}
+
+/* Estilo para o contato */
+#contato {
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contato:hover {
+  transform: translateY(-05px); /* sobe 10px */
+}
+
+#contato h2 {
+  font-size: 24px;
+}
+
+#contato p {
+  font-size: 16px;
+}
+
+/* Estilo para o select, igual aos outros inputs */
+.elementor-field-type-select select {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+h4 {
+  position: relative;
+  top: -600px; /* Sobe 20px */
+  left: 140px; /* Move para a direita */
+  font-weight: normal;
+  font-size: 50px;
+}
+.highlight {
+  color: #0f0f0f;
+  background-color: #ffffff;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  transition: all 0.5s ease-in-out;
+}
+
+.rodapé {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 10px;
+}
+
+.servicos {
+  background-color: #000000;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 40px;
+  padding: 50px;
+  text-align: center;
+}
+
+.servico-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.servico-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.servico-card p {
+  font-size: 15px;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.servico-card:hover {
+  transform: translateY(-10px); /* sobe 10px */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombra mais forte */
+}
+
+.servico-card {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px); /* começa deslocado pra baixo */
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0); /* volta pro lugar */
+}
