@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
@@ -15,6 +17,8 @@ body {
   background-repeat: no-repeat;
   /*background-attachment: fixed; /* Fixa a imagem na tela ao rolar */
   box-sizing: border-box;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 @keyframes brilho {
@@ -256,7 +260,7 @@ footer {
   flex: 2;
   max-width: 100%;
   height: 400px;
-  overflow: hidden;
+  overflow-y: hidden;
   margin-top: 60px;
 }
 
@@ -264,6 +268,7 @@ footer {
   height: 60vh;
   object-fit: cover;
   width: 100%;
+  overflow-y: hidden;
 }
 
 /* Contêiner Principal */
@@ -274,6 +279,7 @@ footer {
   min-height: 100vh;
   padding: 20px;
   gap: 50px;
+  overflow-x: hidden;
 }
 
 /* Estilizando o formulário */
@@ -291,6 +297,7 @@ footer {
   display: flex;
   justify-content: end;
   padding: 20px;
+  overflow-y: hidden;
 }
 
 .letreiro {
@@ -343,7 +350,7 @@ h1 {
 #word-container {
   position: relative;
   display: inline-block;
-  overflow: hidden;
+  overflow-y: hidden;
   width: max-content;
 }
 
@@ -353,6 +360,7 @@ h1 {
   position: relative;
   white-space: nowrap;
   transition: transform 0.5s ease-in-out, opacity 0.3s;
+  overflow-y: hidden;
 }
 
 .exit {
@@ -379,6 +387,7 @@ h5 {
   max-width: 500px;
   text-align: center;
   margin: 20px auto;
+  overflow-y: hidden;
 }
 
 .info-box img {
@@ -467,6 +476,10 @@ h5 {
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  #servico {
+    overflow-y: hidden;
   }
 
   .form-container {
