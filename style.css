@@ -212,6 +212,7 @@ nav a {
 
 /* Notificação (bolinha vermelha) */
 .whatsapp-notification {
+  all: unset; /* remove qualquer estilo herdado */
   position: absolute;
   top: 5px;
   right: 5px;
