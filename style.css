@@ -15,7 +15,8 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /*background-attachment: fixed; /* Fixa a imagem na tela ao rolar */
+  background-image: url(./image/fundo.jpeg);
+  background-attachment: fixed; /* Fixa a imagem na tela ao rolar */
   box-sizing: border-box;
   overflow-y: hidden;
   overflow-x: hidden;
