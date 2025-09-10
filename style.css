@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: ;
 }
 
 body {
@@ -10,12 +10,11 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(https://images.unsplash.com/photo-1454117096348-e4abbeba002c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBsYW5vJTIwZGUlMjBmdW5kbyUyMHdlYnNpdGV8ZW58MHx8MHx8fDA%3D);
+  background-image: url(./image/fundo.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Fixa a imagem na tela ao rolar */
-  overflow-x: hidden;
 }
 
 @keyframes brilho {
@@ -531,22 +530,6 @@ h5 {
     width: 100%;
     white-space: nowrap;
     left: 10%;
-  }
-
-  .carousel {
-    width: ;
-    height: ;
-    overflow: ;
-  }
-
-  .carousel-inner {
-    height: ;
-  }
-
-  .carousel-inner img {
-    width: ;
-    height: ;
-    object-fit: ;
   }
 
   #servico {
