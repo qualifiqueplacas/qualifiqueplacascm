@@ -278,7 +278,7 @@ footer {
 /* Estilizando o formulário */
 .form-container {
   flex: 1;
-  max-width: 400px;
+  max-width: 100%;
   width: 100%;
   background: rgb(245, 243, 243);
   padding: 20px;
@@ -364,41 +364,6 @@ h1 {
   opacity: 0;
 }
 
-.project {
-  display: inline-block !important;
-  width: 100% !important;
-  max-width: 1200px !important;
-  margin-top: 100px;
-  margin-left: 50px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-}
-
-.project-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 180px;
-}
-
-.project img {
-  width: 50%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.project-text {
-  flex-grow: 1;
-  width: 70%;
-  font-size: 24px;
-  color: #555;
-  line-height: 1.6;
-  font-family: sans-serif;
-}
-
-.project:hover {
-  transform: scale(1.05); /* Aumenta um pouco o tamanho ao passar o mouse */
-}
-
 h5 {
   font-size: 30px;
   margin-left: 40px;
@@ -446,22 +411,6 @@ h5 {
 
 .cta:hover {
   background-color: #00ccff;
-}
-
-.carousel-overlay {
-  position: absolute;
-  top: 10%; /* Ajuste a posição para que fique no topo da imagem */
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10; /* Garante que o texto fique sobre o carrossel */
-  color: white;
-  text-align: center;
-}
-
-.carousel-overlay h2 {
-  font-size: 36px;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para o texto */
 }
 
 .orcamento-perso {
@@ -548,21 +497,6 @@ h5 {
     height: auto;
     top: 50%;
     transform: translateY(-80%);
-  }
-
-  .project-content {
-    flex-direction: column; /* Muda para uma coluna para telas menores */
-    align-items: flex-start; /* Alinha a imagem e o texto no início */
-    gap: 20px;
-  }
-
-  .project img {
-    width: 100%; /* A imagem ocupará toda a largura disponível */
-    max-width: 300px; /* Limita o tamanho máximo da imagem */
-  }
-
-  .project-text {
-    max-width: 100%; /* O texto pode ocupar toda a largura disponível */
   }
 
   /* Ajustes no título do cabeçalho */
