@@ -421,7 +421,7 @@ h5 {
   .letreiro {
     margin-left: -30px;
     position: relative;
-    width: 100%;
+    max-width: 100%;
     font-size: 50px;
   }
 
@@ -502,14 +502,6 @@ h5 {
   .header-title {
     font-size: 18px;
     padding: 10px;
-  }
-
-  /* Logo ajustada para telas menores */
-  #logo {
-    top: 50px; /* Posiciona a logo mais perto do topo */
-    left: 15px;
-    margin-top: 0; /* Remove o deslocamento para o topo */
-    width: 150px; /* Define um tamanho fixo para a logo */
   }
 
   header h1 {
