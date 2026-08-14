@@ -1,220 +1,416 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Site da Qualifique Placas - Soluções em fachadas comerciais e comunicação visual.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Qualifique Placas</title>
-    <link rel="icon" type=".image" href="./image/fiveicon.png">
+<meta charSet="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="style.css">
+<title>Qualifique Placas | Fachadas e Comunicação Visual em Unaí</title>
+<meta name="description" content="Fachadas em ACM, letreiros, luminosos, placas, impressão digital e comunicação visual sob medida em Unaí e região. Solicite seu orçamento."/>
+<meta name="keywords" content="fachadas em ACM Unaí,comunicação visual Unaí,placas personalizadas,letreiros em PVC,luminosos,Qualifique Placas"/>
+<meta property="og:title" content="Qualifique Placas | Sua marca merece ser vista"/>
+<meta property="og:description" content="Projetos de fachadas, letreiros e comunicação visual que dão destaque à sua empresa."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="pt_BR"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Qualifique Placas | Sua marca merece ser vista"/>
+<meta name="twitter:description" content="Projetos de fachadas, letreiros e comunicação visual que dão destaque à sua empresa."/>
+<link rel="shortcut icon" href="image/fiveicon.png"/>
+<link rel="icon" href="image/fiveicon.png"/>
+
+
+
+
+
+
 </head>
-
 <body>
-    <header class="header-title">
-          <a href="https://api.whatsapp.com/send?phone=+553899566332" target="_blank"  class="fale-conosco">Fale Conosco</a>
-        <div id="logo">
-            <img src="./image/logo.png" alt="" width="140px">
-        </div>
-        <nav class="navegador">
-            <ul>
-                <li><a href="#servico">Serviços</a></li>
-                <li><a href="#orcamento">Orçamento</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
-   
-
-    <section id="orcamento"></section>
-    <div class="orcamento">
-        <h1 class="letreiro">
-            <strong>O que podemos<br> fazer por você?</strong><br> 
-            <span id="word-container">
-                <span id="changing-word" class="highlight">Placa PVC</span>
-            </span>
-        </h1>
-
-         
-        <div class="form-container">
-                <h3 class="orcamento-perso"><strong>Solicitar um orçamento personalizado.</strong></h3>
-                <form id="orcamento-form">
-                    <input type="text" id="nome" placeholder="Seu Nome" required>
-                    <input type="email" id="email" placeholder="Seu E-mail" required>
-                    <input type="tel" id="telefone" placeholder="Seu Telefone" required>
-    
-                    <div class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_83708e9 elementor-col-100 elementor-field-required">
-                        <div class="elementor-field elementor-select-wrapper">
-                            <select name="form_fields[field_83708e9]" id="form-field-field_83708e9" class="elementor-field-textual elementor-size-sm" required="required" aria-required="true">
-                                <option value="Serviço">Serviço</option>
-                                <option value="Fachadas comerciais">Fachadas comerciais</option>
-                                <option value="Fachadas em ACM">Fachadas em ACM</option>
-                                <option value="Letra Caixa">Letra Caixa</option>
-                                <option value="Outros">Outros</option>
-                            </select>
-                        </div>
-                    </div>
-    
-                    <textarea id="descricao" placeholder="Descreva o serviço desejado" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-        </div>
-    </div>
-  
-  <script>
-    const words = ["Placa PVC", "Placa ACM", "Placa Neon", "Brindes", "Plotagem"];
-    let index = 0;
-
-    function changeWord() {
-    const wordElement = document.getElementById("changing-word");
-
-    // Sai para a direita (efeito de cortina)
-    wordElement.classList.add("exit");
-
-    setTimeout(() => {
-        // Muda a palavra depois da animação de saída
-        index = (index + 1) % words.length;
-        wordElement.textContent = words[index];
-
-        // Reinicia a posição para a esquerda e depois volta ao normal
-        wordElement.classList.remove("exit");
-        wordElement.classList.add("enter");
-
-        setTimeout(() => {
-            wordElement.classList.remove("enter");
-        }, 50);
-    }, 500); // Tempo da animação de saída
-    }
-
-    // Troca a palavra a cada 2 segundos
-    setInterval(changeWord, 2000);
-
-  </script>
-
-    <section id="servico">
-        <section id="orcamento"> 
-        <div class="container reveal">
-            <div id="carouselExampleAutoplaying" class="carousel slide position-relative" data-bs-ride="carousel">
-    
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./image/servico1.jpeg" class="d-block w-100" alt="Placa 1">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/servico2.jpeg" class="d-block w-100" alt="Placa 2">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./image/servico3.jpeg" class="d-block w-100" alt="Placa 3">
-                    </div>
-                </div>
-    
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
-            <script>
-              // Função para enviar os dados para o WhatsApp
-              document.getElementById('orcamento-form').addEventListener('submit', function(event) {
-                  event.preventDefault(); // Impede o envio do formulário para que possamos tratar o envio
-          
-                  // Obtém os valores dos campos do formulário
-                  var nome = document.getElementById('nome').value;
-                  var email = document.getElementById('email').value;
-                  var telefone = document.getElementById('telefone').value;
-                  var servico = document.getElementById('form-field-field_83708e9').value;
-                  var descricao = document.getElementById('descricao').value;
-          
-                  // Formata a mensagem para o WhatsApp
-                  var mensagem = `Olá! Eu gostaria de solicitar um orçamento personalizado. \n\nNome: ${nome} \nE-mail: ${email} \nTelefone: ${telefone} \nServiço: ${servico} \nDescrição: ${descricao}`;
-          
-                  // Substitua o número abaixo pelo número do WhatsApp que receberá a mensagem
-                  var numeroWhatsapp = '+553899566332'; // Insira o número do WhatsApp no formato internacional (sem espaços ou caracteres especiais)
-          
-                  // Codifica a mensagem para uso no URL
-                  var url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(mensagem)}`;
-          
-                  // Abre o link do WhatsApp em uma nova janela
-                  window.open(url, '_blank');
-              });
-            </script>
-        </div>    
-    </section>
-
-    <section class="servicos">
-
-        <div class="servico-card reveal">
-            <img src="./image/adesivo1.png" alt="Adesivos">
-            <h3>Adesivos</h3>
-            <p>Adesivos personalizados para fins <br>promocionais ou decorativos,<br> ideais para sinalização interna e <br>externa, decoração de veículos e <br>mais.</p>
-        </div>
-
-        <div class="servico-card reveal">
-            <img src="./image/caneca-de-cafe2.png" alt="Brindes">
-            <h3>Brindes em Geral</h3>
-            <p>Uma variedade de brindes <br>personalizados, desde canetas e <br>camisetas até itens exclusivos, <br>para promoção de marcas e <br>eventos.</p>
-        </div>
-
-        <div class="servico-card reveal">
-            <img src="./image/folheto3.png" alt="Gráfica">
-            <h3>Gráfica Rápida</h3>
-            <p>Serviços de impressão rápida e de <br>alta qualidade para materiais <br>impressos, como cartões de visita, <br>folders, flyers e panfletos.</p>
-        </div>
-
-        <div class="servico-card reveal">
-            <img src="./image/rolar4.png" alt="Impressão Digital">
-            <h3>Impressão Digital</h3>
-            <p>Impressão de alta resolução em <br>diversos materiais, como papel,<br> vinil e tecido, para banners, <br>cartazes, pôsteres e materiais <br>promocionais.</p>
-        </div>
-
-        <div class="servico-card reveal">
-            <img src="./image/letra-a-5.png" alt="Letra Caixa">
-            <h3>Letra Caixa</h3>
-            <p>Letras tridimensionais <br>personalizadas para criar <br>sinalização de destaque em <br>fachadas e ambientes <br>corporativos.</p>
-        </div>
-
-        <div class="servico-card reveal">
-            <img src="./image/lampada6.png" alt="Luminosos">
-            <h3>Luminosos</h3>
-            <p>Sinalização luminosa <br>personalizada, incluindo letras <br>iluminadas, painéis luminosos e <br>placas de neon, para destacar sua <br>marca à noite.</p>
-        </div>
-    </section>
-
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.2097231513485!2d-46.89691676881829!3d-16.36327553933858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9357abd30c74a291%3A0x9ba0498772506890!2sR.%20Natal%20Justino%20da%20Costa%2C%201143%20-%20Centro%2C%20Una%C3%AD%20-%20MG%2C%2038610-044!5e0!3m2!1spt-BR!2sbr!4v1757444493961!5m2!1spt-BR!2sbr" width="100%gi" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
-    
-    <section id="contato">
-        <div class="info-box reveal">
-            <img src="./image/logo.png" alt="logo" class="logo-cartao">
-            <p>Transformamos ideias em identidade visual!</p>
-            <p>Somos especialistas em placas, fachadas, banners e adesivos.</p>
-            <p>📍 <strong>Atendemos Unaí e região</strong></p>
-            <p> <strong>📱 Telefone de Contato (38) 9956-6332</strong></p>
-            <a href="#" class="cta">Peça seu orçamento</a>
-        </div>
-    </section>
-
-    <!-- Botão do WhatsApp -->
-    <a href="https://api.whatsapp.com/send?phone=+553899566332" class="whatsapp-button" target="_blank">
-    <div class="whatsapp-tooltip">Chamar no WhatsApp</div>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    <span class="whatsapp-notification">1</span>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
-
-<footer class="rodapé">
-        <p>&copy; 2025 Qualifique Placas. Todos os direitos reservados.</p>
+<main>
+<header class="site-header">
+<a class="brand" href="#inicio" aria-label="Qualifique Placas — início">
+<img src="image/logo.png" alt="Qualifique Placas e Comunicação Visual"/>
+</a>
+<nav class="desktop-nav" aria-label="Navegação principal">
+<a href="#servicos">Serviços</a>
+<a href="#projetos">Projetos</a>
+<a href="#processo">Como funciona</a>
+<a href="#contato">Contato</a>
+</nav>
+<a class="header-cta" href="https://wa.me/553899566332?text=Ol%C3%A1%2C%20Qualifique%20Placas!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">Pedir orçamento <svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</a>
+<details class="mobile-menu">
+<summary aria-label="Abrir menu">
+<span>
+</span>
+<span>
+</span>
+<span>
+</span>
+</summary>
+<nav aria-label="Navegação móvel">
+<a href="#servicos">Serviços</a>
+<a href="#projetos">Projetos</a>
+<a href="#processo">Como funciona</a>
+<a href="#contato">Contato</a>
+</nav>
+</details>
+</header>
+<section class="hero" id="inicio">
+<div class="hero-copy">
+<div class="eyebrow">
+<span>
+</span> Comunicação visual em Unaí e região</div>
+<h1>Sua marca merece<span>ser vista.</span>
+</h1>
+<p>Fachadas, letreiros e comunicação visual que transformam espaços em marcas impossíveis de ignorar.</p>
+<div class="hero-actions">
+<a class="button button-primary" href="#orcamento">Quero transformar minha marca <svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</a>
+<a class="button button-ghost" href="https://www.instagram.com/qualifiqueplacas" target="_blank" rel="noreferrer">Ver Instagram</a>
+</div>
+<div class="trust-row" aria-label="Diferenciais">
+<span>Projeto sob medida</span>
+<span>Produção especializada</span>
+<span>Instalação profissional</span>
+</div>
+</div>
+<div class="hero-visual" aria-label="Projeto recente da Qualifique Placas no Instagram">
+<div class="hero-instagram-card">
+<div class="hero-instagram-top">
+<div><span>Projeto recente</span><strong>Fachada em ACM + PVC expandido</strong></div>
+<span class="watch-here">Assista aqui</span>
+</div>
+<iframe title="Fachada em ACM e PVC expandido — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZGmVMbMBPh/embed/" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div class="hero-seal"><span>direto do</span><strong>Instagram</strong><span>da loja</span></div>
+</div>
+</section>
+<div class="ticker" aria-hidden="true">
+<div>
+<span>Fachadas em ACM</span>
+<i>
+</i>
+<span>Letreiros 3D</span>
+<i>
+</i>
+<span>Impressão digital</span>
+<i>
+</i>
+<span>Luminosos</span>
+<i>
+</i>
+<span>Placas personalizadas</span>
+<i>
+</i>
+<span>Adesivos</span>
+<i>
+</i>
+<span>Fachadas em ACM</span>
+<i>
+</i>
+<span>Letreiros 3D</span>
+<i>
+</i>
+</div>
+</div>
+<section class="section services-section" id="servicos">
+<div class="section-heading">
+<div>
+<p class="kicker">O que fazemos</p>
+<h2>Da primeira ideia<br/>à instalação.</h2>
+</div>
+<p>Uma solução completa de comunicação visual para empresas que querem transmitir confiança antes mesmo do primeiro atendimento.</p>
+</div>
+<div class="services-grid">
+<article class="service-card">
+<div class="service-card-top">
+<span>01</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Fachadas em ACM</h3>
+<p>Revestimentos duráveis, modernos e projetados para transformar sua fachada em um ponto de referência.</p>
+<div class="tag-list">
+<span>ACM</span>
+<span>Projeto</span>
+<span>Instalação</span>
+</div>
+</article>
+<article class="service-card">
+<div class="service-card-top">
+<span>02</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Letreiros em relevo</h3>
+<p>Letras em PVC, acrílico e metal com acabamento preciso para valorizar a presença da sua marca.</p>
+<div class="tag-list">
+<span>PVC</span>
+<span>Acrílico</span>
+<span>Galvanizado</span>
+</div>
+</article>
+<article class="service-card">
+<div class="service-card-top">
+<span>03</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Luminosos e neon</h3>
+<p>Soluções iluminadas para sua empresa continuar chamando atenção durante o dia e à noite.</p>
+<div class="tag-list">
+<span>LED</span>
+<span>Neon</span>
+<span>Letra-caixa</span>
+</div>
+</article>
+<article class="service-card">
+<div class="service-card-top">
+<span>04</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Placas e sinalização</h3>
+<p>Comunicação interna e externa clara, resistente e alinhada à identidade visual do seu negócio.</p>
+<div class="tag-list">
+<span>Direcional</span>
+<span>Identificação</span>
+<span>Segurança</span>
+</div>
+</article>
+<article class="service-card">
+<div class="service-card-top">
+<span>05</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Impressão digital</h3>
+<p>Banners, lonas, adesivos e materiais promocionais com cores vivas e excelente definição.</p>
+<div class="tag-list">
+<span>Lona</span>
+<span>Vinil</span>
+<span>Adesivos</span>
+</div>
+</article>
+<article class="service-card">
+<div class="service-card-top">
+<span>06</span>
+<span class="service-arrow">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</span>
+</div>
+<h3>Gráfica e personalizados</h3>
+<p>Cartões, folders, brindes e peças personalizadas para divulgar, presentear e fortalecer sua marca.</p>
+<div class="tag-list">
+<span>Gráfica rápida</span>
+<span>Brindes</span>
+<span>Sob medida</span>
+</div>
+</article>
+</div>
+</section>
+<section class="instagram-section" id="projetos">
+<div class="instagram-copy">
+<p class="kicker">Atualizado pelo @qualifiqueplacas</p>
+<h2>Os trabalhos mais recentes da loja.</h2>
+<p>Conheça projetos oficiais recentes e veja, sem sair da página, os materiais, o acabamento e o resultado real de cada trabalho.</p>
+<a class="button button-dark" href="https://www.instagram.com/qualifiqueplacas" target="_blank" rel="noreferrer">Ver perfil completo <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+<div class="instagram-content">
+<div class="instagram-reels" aria-label="Projetos recentes publicados pela Qualifique Placas">
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Letreiro em PVC expandido</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Letreiro em PVC expandido — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZ-TvepsVjq/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Volume, acabamento e presença para valorizar a identidade da marca.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Fachada completa + iluminação em LED</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Fachada completa — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZ8hJADMSS5/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Revestimento, letreiro e acabamento para a loja Vamos Brincar.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Fachada em lona</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Fachada em lona — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZ7a7E5MCFP/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Comunicação visual renovada com acabamento limpo e leitura imediata.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Troféus personalizados</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Troféus personalizados — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZ7ZvtbMIu4/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Peças personalizadas para premiações, eventos e ocasiões especiais.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>PVC + acrílico preto</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="PVC e acrílico preto — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZ5MtwGMU-F/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Combinação de materiais para um letreiro elegante e marcante.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Letra-caixa luminosa + plotagem</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Letra-caixa luminosa — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZYb-1_M9Co/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Impacto durante o dia e destaque à noite.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Letreiro em acrílico dourado</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Acrílico dourado — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DZIPndKskVp/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Acabamento sofisticado para destacar a marca no ambiente.</p></article>
+<article class="reel-card"><div class="reel-card-header"><div><span>Publicado no Instagram</span><h3>Fachada com refletores</h3></div><span class="watch-here">Play / pausa</span></div><iframe title="Fachada com refletores — Instagram da Qualifique Placas" src="https://www.instagram.com/reel/DX65P_Zss89/embed/" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe><p>Visibilidade e destaque noturno com iluminação direcionada.</p></article>
+</div>
+<div class="projects-footer instagram-footer"><p>Seu próximo projeto pode estar aqui.</p><a href="#orcamento">Começar meu projeto <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+</section>
+<section class="section process-section" id="processo">
+<div class="section-heading">
+<div>
+<p class="kicker">Simples do começo ao fim</p>
+<h2>Você imagina.<br/>A gente materializa.</h2>
+</div>
+</div>
+<div class="process-grid">
+<article>
+<span>01</span>
+<div>
+<h3>Conte sua ideia</h3>
+<p>Envie sua referência, necessidade e informações do espaço pelo WhatsApp.</p>
+</div>
+</article>
+<article>
+<span>02</span>
+<div>
+<h3>Planejamos a solução</h3>
+<p>Indicamos materiais, acabamentos e o melhor formato para o seu objetivo.</p>
+</div>
+</article>
+<article>
+<span>03</span>
+<div>
+<h3>Produzimos e instalamos</h3>
+<p>Seu projeto ganha forma com cuidado em cada etapa até a entrega final.</p>
+</div>
+</article>
+</div>
+</section>
+<section class="quote-section" id="orcamento">
+<div class="quote-intro">
+<p class="kicker">Vamos começar?</p>
+<h2>Sua nova imagem começa com uma conversa.</h2>
+<p>Conte o que você precisa. O formulário organiza as informações e abre o WhatsApp para você falar diretamente com a equipe.</p>
+<div class="quote-contact">
+<span>Atendimento</span>
+<a href="https://wa.me/553899566332?text=Ol%C3%A1%2C%20Qualifique%20Placas!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">(38) 9956-6332</a>
+<span>Unaí • Minas Gerais</span>
+</div>
+</div>
+<form class="quote-form">
+<div class="form-row">
+<label>Seu nome*<input type="text" placeholder="Como podemos te chamar?" required="" name="nome"/>
+</label>
+<label>Empresa<input type="text" placeholder="Nome da sua empresa" name="empresa"/>
+</label>
+</div>
+<div class="form-row">
+<label>Serviço desejado*<select name="servico" required="">
+<option value="" disabled="" selected="">Selecione uma opção</option>
+<option>Fachada em ACM</option>
+<option>Letreiro em relevo</option>
+<option>Luminoso ou neon</option>
+<option>Placas e sinalização</option>
+<option>Impressão digital</option>
+<option>Gráfica ou personalizados</option>
+<option>Outro projeto</option>
+</select>
+</label>
+<label>Sua cidade*<input type="text" placeholder="Cidade / UF" required="" name="cidade"/>
+</label>
+</div>
+<label>Conte um pouco sobre o projeto*<textarea name="detalhes" rows="5" placeholder="Ex.: preciso renovar a fachada da loja, tenho a arte da marca e as medidas aproximadas..." required="">
+</textarea>
+</label>
+<button class="button button-submit" type="submit">Enviar pelo WhatsApp <svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M16 3a12.7 12.7 0 0 0-11 19l-1.6 6 6.1-1.6A12.8 12.8 0 1 0 16 3Z">
+</path>
+<path d="M12 10.2c.3-.6.7-.6 1-.6h.7c.2 0 .5.1.6.5l1.1 2.5c.1.4.1.7-.1 1l-.9 1.1c-.2.2-.3.5-.1.8.8 1.7 2.1 3 3.8 3.8.3.2.6.1.8-.1l1.2-1.4c.2-.3.6-.3.9-.2l2.4 1.1c.4.2.6.3.6.6 0 .3-.1 1.7-.8 2.4-.7.8-1.9 1.3-3.1 1.3-1.2 0-3.2-.5-5.7-1.9a12.7 12.7 0 0 1-4.5-4.3 6 6 0 0 1-1.2-3.3c0-1.4.7-2.6 1.3-3.3Z">
+</path>
+</svg>
+</button>
+<small>Você será direcionado ao WhatsApp para revisar e enviar a mensagem.</small>
+</form>
+</section>
+<section class="section contact-section" id="contato">
+<div class="contact-card">
+<div>
+<p class="kicker">Visite ou fale com a gente</p>
+<h2>Qualifique Placas</h2>
+<p>R. Natal Justino da Costa, 1143<br/>Centro • Unaí/MG</p>
+</div>
+<div class="contact-actions">
+<a href="https://wa.me/553899566332?text=Ol%C3%A1%2C%20Qualifique%20Placas!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noreferrer">WhatsApp <svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</a>
+<a href="https://www.instagram.com/qualifiqueplacas" target="_blank" rel="noreferrer">Instagram <svg viewBox="0 0 24 24" aria-hidden="true">
+<path d="M5 12h14M13 6l6 6-6 6">
+</path>
+</svg>
+</a>
+</div>
+</div>
+<iframe class="map" title="Localização da Qualifique Placas em Unaí" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3828.2097231513485!2d-46.89691676881829!3d-16.36327553933858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9357abd30c74a291%3A0x9ba0498772506890!2sR.%20Natal%20Justino%20da%20Costa%2C%201143%20-%20Centro%2C%20Una%C3%AD%20-%20MG%2C%2038610-044!5e0!3m2!1spt-BR!2sbr!4v1757444493961!5m2!1spt-BR!2sbr" loading="lazy" referrerPolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+<section class="section faq-section">
+<div class="section-heading">
+<div>
+<p class="kicker">Dúvidas frequentes</p>
+<h2>Antes de começar<br/>seu projeto.</h2>
+</div>
+</div>
+<div class="faq-list">
+<details>
+<summary>Como solicito um orçamento?<span>+</span>
+</summary>
+<p>Preencha o formulário com uma descrição rápida do projeto. Ao enviar, sua mensagem já vai organizada para o WhatsApp da Qualifique Placas.</p>
+</details>
+<details>
+<summary>Vocês fazem projeto sob medida?<span>+</span>
+</summary>
+<p>Sim. Cada solução é pensada de acordo com a identidade da marca, o espaço disponível, o material mais indicado e o resultado desejado.</p>
+</details>
+<details>
+<summary>Quais regiões vocês atendem?<span>+</span>
+</summary>
+<p>A Qualifique Placas atende Unaí e região. Para confirmar disponibilidade, prazo e instalação no seu endereço, fale com a equipe pelo WhatsApp.</p>
+</details>
+<details>
+<summary>Posso enviar referências e medidas?<span>+</span>
+</summary>
+<p>Sim. Fotos do local, medidas aproximadas, logotipo e referências ajudam a equipe a entender o projeto e agilizar o primeiro atendimento.</p>
+</details>
+</div>
+</section>
+<footer>
+<div class="footer-top">
+<img src="image/logo.png" alt="Qualifique Placas"/>
+<p>Transformamos ideias em identidade visual.</p>
+<a href="#inicio">Voltar ao topo ↑</a>
+</div>
+<div class="footer-bottom">
+<span>© <!-- -->2026<!-- --> Qualifique Placas</span>
+<span>Placas e comunicação visual • Unaí/MG</span>
+</div>
 </footer>
-
-
+<a class="floating-whatsapp" href="https://wa.me/553899566332?text=Ol%C3%A1%2C%20Qualifique%20Placas!%20Vim%20pelo%20site%20e%20quero%20solicitar%20um%20or%C3%A7amento." target="_blank" rel="noreferrer" aria-label="Falar com a Qualifique Placas pelo WhatsApp">
+<svg viewBox="0 0 32 32" aria-hidden="true">
+<path d="M16 3a12.7 12.7 0 0 0-11 19l-1.6 6 6.1-1.6A12.8 12.8 0 1 0 16 3Z">
+</path>
+<path d="M12 10.2c.3-.6.7-.6 1-.6h.7c.2 0 .5.1.6.5l1.1 2.5c.1.4.1.7-.1 1l-.9 1.1c-.2.2-.3.5-.1.8.8 1.7 2.1 3 3.8 3.8.3.2.6.1.8-.1l1.2-1.4c.2-.3.6-.3.9-.2l2.4 1.1c.4.2.6.3.6.6 0 .3-.1 1.7-.8 2.4-.7.8-1.9 1.3-3.1 1.3-1.2 0-3.2-.5-5.7-1.9a12.7 12.7 0 0 1-4.5-4.3 6 6 0 0 1-1.2-3.3c0-1.4.7-2.6 1.3-3.3Z">
+</path>
+</svg>
+<span>Orçamento</span>
+</a>
+</main>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Qualifique Placas","description":"Placas, fachadas, letreiros e comunicação visual sob medida.","telephone":"+55 38 9956-6332","address":{"@type":"PostalAddress","streetAddress":"Rua Natal Justino da Costa, 1143","addressLocality":"Unaí","addressRegion":"MG","postalCode":"38610-044","addressCountry":"BR"},"sameAs":["https://www.instagram.com/qualifiqueplacas"]}</script>
+<script src="script.js" defer>
+</script>
+</body>
 </html>
